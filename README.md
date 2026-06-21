@@ -11,18 +11,11 @@ Handwritten notes on ML/DL & math fundamentals, organized by topic modules for h
 Append-only. New topics get the next free `TNN` slot; do not renumber existing entries.
 编号只增不改，旧链接永不失效。
 
-### Math 数学基础
-
 | ID  | Topic                         | Keywords                            | Status   |
 | --- | ----------------------------- | ----------------------------------- | -------- |
 | T01 | [SVD / PCA / LDA](./topics/T01-svd-pca-lda/)            | dim reduction · eigen · projection  | 🧪 Draft |
 | T02 | [Matrix Calculus 矩阵求导](./topics/T02-matrix-calculus/) | layout · chain rule · Jacobian      | 🧪 Draft |
 | T03 | [KKT & Duality 对偶问题](./topics/T03-kkt-duality/)      | convex · Lagrangian · slackness     | 🧪 Draft |
-
-### Deep Learning 深度学习
-
-| ID  | Topic                         | Keywords                            | Status   |
-| --- | ----------------------------- | ----------------------------------- | -------- |
 | T04 | [DL Optimizers 优化器](./topics/T04-dl-optimizers/)      | SGD · Momentum · Adam · Lion        | 🧪 Draft |
 
 **Status legend** — 🧪 Draft (占号未写) · 🚧 WIP (持续补充) · ✅ Done (已封板，建议生成 `topic.pdf`)
