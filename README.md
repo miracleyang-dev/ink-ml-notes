@@ -13,7 +13,7 @@ Append-only. New topics get the next free `TNN` slot; do not renumber existing e
 
 | ID  | Topic                         | Keywords                            | Status   |
 | --- | ----------------------------- | ----------------------------------- | -------- |
-| T01 | [SVD / PCA / LDA](./topics/T01-svd-pca-lda/)            | dim reduction · eigen · projection  | 🧪 Draft |
+| T01 | [SVD / PCA / LDA](./topics/T01-svd-pca-lda/)            | dim reduction · eigen · projection  |🚧 WIP |
 | T02 | [Matrix Calculus 矩阵求导](./topics/T02-matrix-calculus/) | layout · chain rule · Jacobian      | 🧪 Draft |
 | T03 | [KKT & Duality 对偶问题](./topics/T03-kkt-duality/)      | convex · Lagrangian · slackness     | 🧪 Draft |
 | T04 | [DL Optimizers 优化器](./topics/T04-dl-optimizers/)      | SGD · Momentum · Adam · Lion        | 🧪 Draft |
