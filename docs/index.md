@@ -6,9 +6,7 @@ hide:
 
 # ML Atlas
 
-> 按主题模块化的深度学习与机器学习及相关数学基础知识库 · Markdown + KaTeX · 部署于 Railway
-
-<div class="hcarousel" data-hcarousel markdown="0">
+<div class="hcarousel" data-hcarousel>
   <div class="hcarousel__track">
 
     <a class="hcard" href="T01-svd-pca-lda/">
@@ -43,11 +41,8 @@ hide:
   <div class="hcarousel__hint">← SCROLL →</div>
 </div>
 
-## 工作流
-
-```
-git push → Railway 自动构建 → 站点更新
-```
-
-- 内容形态：纯 Markdown + KaTeX 公式，无图片依赖
-- 单页另存 PDF：浏览器 `Ctrl+P` 即可
+<section class="site-meta">
+  <p>按主题模块化的深度学习与机器学习及相关数学基础知识库</p>
+  <p>Markdown + KaTeX · 部署于 Railway</p>
+  <p>单页另存 PDF：浏览器 <code>Ctrl+P</code> 即可</p>
+</section>

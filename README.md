@@ -39,13 +39,6 @@ ml-atlas/
 2. 在 `mkdocs.yml` 的 `nav` 节点对应分组下追加一行。
 3. commit + push 即可。
 
-## 内容生成工作流
-
-1. 用 AI 生成或编辑专题 Markdown，公式用 `$...$` / `$$...$$` 包裹。
-2. 写入对应 `docs/TNN-slug/index.md`。
-3. 本地预览（见下节）确认无误。
-4. `git commit && git push` —— Railway 监听 push，约 90 秒内重建上线。
-
 ## 本地预览
 
 ```bash

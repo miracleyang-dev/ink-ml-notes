@@ -2,18 +2,19 @@
    ML Atlas — minimal dark tech
    ============================================ */
 
-:root {
-  --bg:        #0a0d14;
-  --bg-soft:   #11151f;
-  --panel:     #141926;
-  --border:    #1f2738;
-  --text:      #d4dbe8;
-  --text-dim:  #7783a0;
-  --cyan:      #00d4ff;
-  --cyan-dim:  #007a99;
-}
-
+:root,
 [data-md-color-scheme="slate"] {
+  --bg:          #0a0d14;
+  --bg-soft:     #11151f;
+  --panel:       #141926;
+  --border:      #1f2738;
+  --text:        #d4dbe8;
+  --text-strong: #ffffff;
+  --text-dim:    #7783a0;
+  --cyan:        #00d4ff;
+  --cyan-dim:    #007a99;
+  --code-inline: #e8d39a;
+  --card-shadow: rgba(0, 212, 255, 0.18);
   --md-default-bg-color:           var(--bg);
   --md-default-fg-color:           var(--text);
   --md-default-fg-color--light:    var(--text);
@@ -25,16 +26,53 @@
   --md-typeset-a-color:            var(--cyan);
 }
 
+[data-md-color-scheme="default"] {
+  --bg:          #f6f8fc;
+  --bg-soft:     #ffffff;
+  --panel:       #ffffff;
+  --border:      #d8e0ef;
+  --text:        #1f2937;
+  --text-strong: #111827;
+  --text-dim:    #667085;
+  --cyan:        #2563eb;
+  --cyan-dim:    #93b4f2;
+  --code-inline: #7c2d12;
+  --card-shadow: rgba(37, 99, 235, 0.14);
+  --md-default-bg-color:           var(--bg);
+  --md-default-fg-color:           var(--text);
+  --md-default-fg-color--light:    var(--text);
+  --md-default-fg-color--lighter:  var(--text-dim);
+  --md-default-fg-color--lightest: var(--border);
+  --md-code-bg-color:              #eef2f8;
+  --md-primary-fg-color:           #334155;
+  --md-accent-fg-color:            var(--cyan);
+  --md-typeset-a-color:            var(--cyan);
+}
+
 body { background: var(--bg); }
 
 /* Header */
 .md-header {
-  background: rgba(10, 13, 20, 0.85);
+  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  color: var(--text);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   box-shadow: none;
 }
-.md-tabs { background: transparent; border-bottom: 1px solid var(--border); }
+.md-header__title { color: var(--text-strong); }
+.md-header__button { color: var(--text); }
+.md-search__form {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+}
+.md-search__input { color: var(--text); }
+.md-search__input::placeholder { color: var(--text-dim); }
+.md-tabs {
+  background: transparent;
+  border-bottom: 1px solid var(--border);
+}
+.md-tabs__link { color: var(--text-dim); }
 .md-tabs__link--active { color: var(--cyan); }
 
 /* Typography */
@@ -42,7 +80,7 @@ body { background: var(--bg); }
 .md-typeset h2,
 .md-typeset h3 {
   font-family: "JetBrains Mono", "Roboto Mono", ui-monospace, monospace;
-  color: #fff;
+  color: var(--text-strong);
 }
 .md-typeset h1 {
   font-size: 1.6rem;
@@ -166,7 +204,7 @@ body { background: var(--bg); }
 .md-typeset :not(pre) > code {
   background: var(--bg-soft);
   border: 1px solid var(--border);
-  color: #e8d39a;
+  color: var(--code-inline);
   padding: 0.1em 0.4em;
   border-radius: 3px;
   font-size: 0.82em;
@@ -235,7 +273,7 @@ body { background: var(--bg); }
   transform: scale(1);
   opacity: 1;
   border-color: var(--cyan);
-  box-shadow: 0 0 32px rgba(0, 212, 255, 0.18);
+  box-shadow: 0 0 32px var(--card-shadow);
 }
 .hcard:hover { border-color: var(--cyan); }
 
@@ -249,7 +287,7 @@ body { background: var(--bg); }
   font-family: "JetBrains Mono", monospace;
   font-size: 1.05rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-strong);
   line-height: 1.3;
 }
 .hcard__desc {
@@ -272,6 +310,18 @@ body { background: var(--bg); }
   color: var(--text-dim);
   letter-spacing: 0.15em;
   margin-top: 0.5rem;
+}
+
+.site-meta {
+  margin: 3rem 0 0;
+  padding: 1rem 1.2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+.site-meta p {
+  margin: 0.2rem 0;
 }
 
 @media (max-width: 720px) {
