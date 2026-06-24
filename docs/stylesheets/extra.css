@@ -330,6 +330,20 @@ body { background: var(--bg); }
 }
 
 @media (max-width: 720px) {
+  .md-typeset { font-size: 0.76rem; line-height: 1.65; }
+  .md-typeset h1 { font-size: 1.25rem; }
+  .md-typeset h2 { font-size: 1rem; }
+  .md-typeset div.arithmatex,
+  .md-typeset pre {
+    margin-left: -0.4rem;
+    margin-right: -0.4rem;
+  }
+  .md-typeset table:not([class]) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
   .hcard { flex-basis: 78vw; }
   .hcarousel__track { padding: 1rem 11vw; }
+  .site-meta { padding: 0.9rem 0; }
 }
