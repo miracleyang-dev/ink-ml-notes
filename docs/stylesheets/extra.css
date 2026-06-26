@@ -577,14 +577,15 @@ html, body {
   /* site-meta: shift further left on mobile — pull beyond .md-content__inner
      padding via negative margin so the border-top and bullet glyph sit at
      (or slightly past) the page's left edge, matching the carousel rail. */
+  /* Anchor to the viewport's left edge regardless of parent padding. */
   .site-meta {
-    margin-left:  calc(-1 * max(0.8rem, env(safe-area-inset-left)));
-    margin-right: calc(-1 * max(0.8rem, env(safe-area-inset-right)));
-    padding: 0.9rem 0.1rem;
+    margin-left:  calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 0.9rem max(0.15rem, env(safe-area-inset-left)) 0.9rem max(0.15rem, env(safe-area-inset-left));
     font-size: 0.76rem;
   }
-  .site-meta li { padding-left: 0.6rem; }
-  .site-meta li::before { font-size: 0.72em; left: -0.05rem; }
+  .site-meta li { padding-left: 0.45rem; }
+  .site-meta li::before { font-size: 0.68em; left: -0.1rem; }
 }
 
 /* ============================================
@@ -595,8 +596,8 @@ html, body {
   .hcarousel__track { padding: 1.1rem 8vw; }
   .hcard          { flex-basis: 84vw; padding: 1.15rem 1.05rem; }
   .hcard__title   { font-size: 0.98rem; }
-  .site-meta      { margin-left: calc(-1 * max(1rem, env(safe-area-inset-left))); margin-right: calc(-1 * max(1rem, env(safe-area-inset-right))); padding: 0.85rem 0.05rem; }
-  .site-meta li   { padding-left: 0.55rem; }
+  .site-meta      { margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding-left: max(0.1rem, env(safe-area-inset-left)); padding-right: max(0.1rem, env(safe-area-inset-right)); }
+  .site-meta li   { padding-left: 0.4rem; }
 }
 
 /* ============================================
@@ -631,12 +632,13 @@ html, body {
   }
 
   .site-meta {
-    margin-left:  calc(-1 * max(1.1rem, env(safe-area-inset-left)));
-    margin-right: calc(-1 * max(1.1rem, env(safe-area-inset-right)));
-    padding: 0.8rem 0.05rem;
+    margin-left:  calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left:  max(0.05rem, env(safe-area-inset-left));
+    padding-right: max(0.05rem, env(safe-area-inset-right));
     font-size: 0.74rem;
   }
-  .site-meta li { padding-left: 0.5rem; }
+  .site-meta li { padding-left: 0.35rem; }
 }
 
 /* ============================================
