@@ -574,14 +574,17 @@ html, body {
 
   .hcarousel__hint { font-size: 0.68rem; margin-top: 0.25rem; }
 
-  /* site-meta: align flush with H1 / paragraph content on mobile.
-     Horizontal padding mirrors .md-content__inner so the border-top line
-     and the first character of each item line up with the title above. */
+  /* site-meta: shift further left on mobile — pull beyond .md-content__inner
+     padding via negative margin so the border-top and bullet glyph sit at
+     (or slightly past) the page's left edge, matching the carousel rail. */
   .site-meta {
-    padding: 0.9rem 0.6rem;
+    margin-left: -0.8rem;
+    margin-right: -0.8rem;
+    padding: 0.9rem 0.4rem;
     font-size: 0.76rem;
   }
-  .site-meta li { padding-left: 0.95rem; }
+  .site-meta li { padding-left: 0.75rem; }
+  .site-meta li::before { font-size: 0.78em; }
 }
 
 /* ============================================
@@ -592,7 +595,8 @@ html, body {
   .hcarousel__track { padding: 1.1rem 8vw; }
   .hcard          { flex-basis: 84vw; padding: 1.15rem 1.05rem; }
   .hcard__title   { font-size: 0.98rem; }
-  .site-meta      { padding: 0.85rem 0.5rem; }
+  .site-meta      { margin-left: -0.9rem; margin-right: -0.9rem; padding: 0.85rem 0.3rem; }
+  .site-meta li   { padding-left: 0.7rem; }
 }
 
 /* ============================================
@@ -626,8 +630,13 @@ html, body {
     margin-right: -0.4rem;
   }
 
-  .site-meta { padding: 0.8rem 0.4rem; font-size: 0.74rem; }
-  .site-meta li { padding-left: 0.85rem; }
+  .site-meta {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 0.8rem 0.25rem;
+    font-size: 0.74rem;
+  }
+  .site-meta li { padding-left: 0.65rem; }
 }
 
 /* ============================================
